@@ -1,97 +1,131 @@
+/* Общие стили */
+
+/* Сброс стилей для <body> */
 body {
     margin: 0;
-    font-family: 'Gabarito', cursive; system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Gabarito', cursive, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #1e1e1e; /* Темный фон страницы */
+    color: #ffffff; /* Белый текст */
 }
 
+/* Сброс стилей для <ul> */
 ul {
     padding: 0;
     margin: 0;
     list-style: none;
 }
 
-.header li {
-    display: inline;
-    margin-right: 60px;
-}
-
-li:last-child {
-    margin-right: 0;
-}
-
+/* Стили для шапки */
 .header {
-    font-family: 'Tektur', cursive; system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #808080;
+    font-family: 'Tektur', cursive, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #ff5722; /* Оранжевый текст */
     padding: 20px 0;
     letter-spacing: 2px;
     text-transform: uppercase;
-    border-bottom: 5px solid #808080;
-    box-shadow: 0px 0px 10px #808080(0, 0, 0, 0.5); 
+    border-bottom: 5px solid #ff5722; /* Оранжевое подчеркивание */
     font-size: 1.25rem;
-    background-image: url(images/background.jpg);
+    background-image: url(images/background.jpg); /* Фоновое изображение */
     background-repeat: no-repeat;
-    background-size: cover; 
+    background-size: cover;
     background-position: center;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5); /* Тень */
 }
 
+/* Стили для элементов списка в шапке */
+.header li {
+    display: inline;
+    margin-right: 20px;
+}
+
+/* Убираем отступ справа у последнего элемента списка */
+.header li:last-child {
+    margin-right: 0;
+}
+
+/* Стили для ссылок в меню */
 .main-menu a {
     text-decoration: none;
-    color: #808080;
-    font-weight: bold; 
+    color: #ff5722; /* Оранжевая ссылка */
+    font-weight: bold;
 }
 
+/* Стили для контейнера */
 .container {
     max-width: 75%;
-    margin: 0 auto; 
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #333333; /* Темный фон контейнера */
+    border-radius: 5px; /* Скругление углов */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Тень */
 }
 
+/* Стили для подвала */
 .footer {
-    background-color:#808080 (255, 66, 14);
-    color: #808080;
+    background-color: #1e1e1e; /* Темный фон подвала */
+    color: #ffffff; /* Белый текст */
     padding: 20px 0;
     margin-top: 20px;
+    text-align: center;
 }
 
+/* Стили для аватарки */
 .avatar {
     height: 300px;
     text-align: center;
-    background-image: url();
+    background-image: url('images/person.png'); /* Фоновое изображение аватарки */
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover; /* Растягиваем изображение на всю область */
+    border-radius: 50%; /* Круглая форма */
+    margin: 20px auto;
 }
 
+/* Убираем границы изображения внутри .avatar */
 .avatar img {
     height: 100%;
 }
 
+/* Стили для кнопок */
 .btn {
     text-decoration: none;
-    color: #808080;
-    border: 2px solid #808080 ;
-    padding: 10px;
+    color: #ffffff; /* Белый текст */
+    background-color: #ff5722; /* Оранжевая кнопка */
+    border: 2px solid #ff5722; /* Оранжевая граница */
+    padding: 10px 20px;
     display: inline-block;
+    border-radius: 5px; /* Скругление углов */
+    transition: background-color 0.3s, border-color 0.3s; /* Анимация при наведении */
 }
 
+/* Стили для кнопок при наведении */
 .btn:hover {
-    color: #000000;
-    background-color: #808080;
-    border: 5px;
-    padding: 100px;
-    border-color: #808080;
+    background-color: #ff7043; /* Ярко-оранжевый цвет */
+    border-color: #ff7043; /* Ярко-оранжевая граница */
 }
 
+/* Стили для таблицы */
 table {
     border-collapse: collapse;
+    width: 100%;
 }
 
+/* Стили для ячеек таблицы */
 table, th, td {
-    border: 1px solid #808080;
-    color: #202020;
+    border: 1px solid #333333; /* Темные границы */
+    color: #ffffff; /* Белый текст */
 }
 
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+/* Дополнительные классы */
 .w-50 {
     width: 50%;
 }
 
 .mx-auto {
     margin-right: auto;
+    margin-left: auto;
 }
